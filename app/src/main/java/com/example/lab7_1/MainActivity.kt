@@ -24,12 +24,24 @@ class MainActivity : AppCompatActivity() {
 
         val catAPI = retrofit.create(CatAPI::class.java)
 
-        CoroutineScope(Dispatchers.IO).launch {
-            val cat = catAPI.getFact()
-            runOnUiThread{
-                binding.tvFact.text = cat.fact
+        binding.ivFirstCat.setOnClickListener(){
+            CoroutineScope(Dispatchers.IO).launch {
+                val cat = catAPI.getFact()
+                runOnUiThread{
+                    binding.tvFact.text = cat.fact
+                }
             }
         }
+
+        binding.ivSecondCat.setOnClickListener(){
+            CoroutineScope(Dispatchers.IO).launch {
+                val cat = catAPI.getFact()
+                runOnUiThread{
+                    binding.tvFact.text = cat.fact
+                }
+            }
+        }
+
 
     }
 }

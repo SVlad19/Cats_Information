@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.499" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivFirstCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/tvFact"
@@ -35,7 +35,7 @@
         app:srcCompat="@drawable/first_cat" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivSecondCat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
